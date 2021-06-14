@@ -104,7 +104,7 @@ export default function Home(prop) {
             Quality Potential
           </label>
           <select
-            id="inputState"
+            data-testid="qualityValue"
             className="form-select"
             onChange={(e) => {
               LoadCountries(e.target.value);
