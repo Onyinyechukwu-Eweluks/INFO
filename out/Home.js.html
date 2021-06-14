@@ -1,4 +1,32 @@
-import { useEffect, useState } from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Home.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Home.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useEffect, useState } from "react";
 import { qualityPotential } from "../Api/data";
 const serviceUrl = "https://coffee-varieties.vercel.app/api";
 
@@ -96,14 +124,14 @@ export default function Home(prop) {
   }, []);
 
   return (
-    <div className="container">
-      <h2>Coffee Varieties</h2>
-      <form className="row g-3" style={{ width: "70%" }}>
-        <div className="col-md-4">
-          <label for="inputState" className="form-label">
+    &lt;div className="container">
+      &lt;h2>Coffee Varieties&lt;/h2>
+      &lt;form className="row g-3" style={{ width: "70%" }}>
+        &lt;div className="col-md-4">
+          &lt;label for="inputState" className="form-label">
             Quality Potential
-          </label>
-          <select
+          &lt;/label>
+          &lt;select
             id="inputState"
             className="form-select"
             onChange={(e) => {
@@ -112,62 +140,62 @@ export default function Home(prop) {
               LoadVarietyList(e.target.value);
             }}
           >
-            <option disabled selected>
+            &lt;option disabled selected>
               Choose...
-            </option>
+            &lt;/option>
             {quality.map((q, index) => (
-              <option key={index} value={q.value}>
+              &lt;option key={index} value={q.value}>
                 {q.quality}
-              </option>
+              &lt;/option>
             ))}
-          </select>
-        </div>
-        <div className="col-md-4">
-          <label for="inputState" className="form-label">
+          &lt;/select>
+        &lt;/div>
+        &lt;div className="col-md-4">
+          &lt;label for="inputState" className="form-label">
             Country
-          </label>
+          &lt;/label>
 
-          <select
+          &lt;select
             id="inputState"
             name="country"
             className="form-select"
             onChange={(e) => e.target.value}
           >
-            <option disabled selected>
+            &lt;option disabled selected>
               Choose...
-            </option>
+            &lt;/option>
             {countries.map((country, index) => (
-              <option value={country} key={index}>
+              &lt;option value={country} key={index}>
                 {country}
-              </option>
+              &lt;/option>
             ))}
-          </select>
-        </div>
+          &lt;/select>
+        &lt;/div>
 
-        <div className="col-md-4">
-          <label for="inputState" className="form-label">
+        &lt;div className="col-md-4">
+          &lt;label for="inputState" className="form-label">
             Leaf Rut Resistance
-          </label>
-          <select
+          &lt;/label>
+          &lt;select
             id="inputState"
             className="form-select"
             onChange={(e) => e.target.value}
           >
-            <option disabled selected>
+            &lt;option disabled selected>
               Choose...
-            </option>
+            &lt;/option>
             {resistances.map((rust, index) => (
-              <option key={index}>{rust}</option>
+              &lt;option key={index}>{rust}&lt;/option>
             ))}
-          </select>
-        </div>
-      </form>
+          &lt;/select>
+        &lt;/div>
+      &lt;/form>
 
-      <div className="coffee-varieties">
-        <h5>List of Varieties</h5>
-        <ul className="list-group list-group-flush">
+      &lt;div className="coffee-varieties">
+        &lt;h5>List of Varieties&lt;/h5>
+        &lt;ul className="list-group list-group-flush">
           {varietyList.map((vr, index) => (
-            <li
+            &lt;li
               key={index}
               className="list-group-item"
               onClick={() => {
@@ -175,10 +203,33 @@ export default function Home(prop) {
               }}
             >
               {vr.name}
-            </li>
+            &lt;/li>
           ))}
-        </ul>
-      </div>
-    </div>
+        &lt;/ul>
+      &lt;/div>
+    &lt;/div>
   );
 }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Mon Jun 14 2021 12:22:31 GMT+0200 (Central European Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

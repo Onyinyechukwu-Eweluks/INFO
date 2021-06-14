@@ -2,14 +2,21 @@ import React, { useEffect, useRef, useState } from "react";
 const serviceUrl = "https://coffee-varieties.vercel.app/api";
 
 const CoffeeOverview = (props) => {
+  /**
+   * Declearing the states
+   */
   const [coffeeProperties, setCoffeeProperties] = useState({});
   const coffeeName = useRef(props.match.params.name).current;
-  console.log(coffeeName);
 
   useEffect(() => {
     GetAllVarieties(coffeeName);
   }, [coffeeName]);
 
+  /**
+   *
+   * @param {String} name - A string of coffee name
+   * @returns {Object} - The object overview of the coffee
+   */
   async function GetAllVarieties(name) {
     return await fetch(serviceUrl)
       .then((response) => response.json())
